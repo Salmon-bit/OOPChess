@@ -128,6 +128,10 @@ class ChessTable:
             self.map[position[0]][position[1]] = None
         else:
             raise ValueError("Invalid move! Destination point must be None and position must be ChessUnit subclass.")
+    
+    def attack_unit(self, position: tuple[int, int], destination: tuple[int, int]) -> None:
+        """Unit at `position` attacks unit at `destination`."""
+        self.get_unit(position).attack(destination, self)
 
     def __repr__(self) -> str:
         return self.__str__()

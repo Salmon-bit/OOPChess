@@ -23,7 +23,7 @@ class Pawn(ChessUnit):
                     else:
                         raise ValueError('Destination point must be None')
                 else:
-                    raise ValueError('Invalid move for Pawn')
+                    raise ValueError('Invalid move for a Pawn')
             else:
                 if self.pos[0] + 1 == dest[0] and self.pos[1] == dest[1]:
                     if self.check_available(dest, map):
@@ -31,7 +31,7 @@ class Pawn(ChessUnit):
                     else:
                         raise ValueError('Destination point must be None')
                 else:
-                    raise ValueError('Invalid move for Pawn')
+                    raise ValueError('Invalid move for a Pawn')
         else:
             if self.side == 'white':
                 if (self.pos[0] - 1 == dest[0] and self.pos[1] == dest[1]) or (self.pos[0] - 2 == dest[0] and self.pos[1] == dest[1]):
@@ -40,7 +40,7 @@ class Pawn(ChessUnit):
                     else:
                         raise ValueError('Destination point must be None')
                 else:
-                    raise ValueError('Invalid move for Pawn')
+                    raise ValueError('Invalid move for a Pawn')
             else:
                 if (self.pos[0] + 1 == dest[0] and self.pos[1] == dest[1]) or (self.pos[0] + 2 == dest[0] and self.pos[1] == dest[1]):
                     if self.check_available(dest, map):
@@ -48,6 +48,32 @@ class Pawn(ChessUnit):
                     else:
                         raise ValueError('Destination point must be None')
                 else:
-                    raise ValueError('Invalid move for Pawn')
+                    raise ValueError('Invalid move for a Pawn')
 
         self.moved = True
+    
+    def attack(self, dest: tuple[int, int], map: ChessTable):
+        if self.side == 'white':
+            if self.pos[0] - 1 == dest[0] and (self.pos[1] - 1 == dest[1] or self.pos[1] + 1 == dest[1]):
+                if not self.check_available(dest, map):
+                    map.set_unit(dest, None)
+                    last_pos = self.pos
+                    self.pos = dest
+                    map.set_unit(last_pos, None)
+                    map.set_unit(self.pos, self)
+                else:
+                    raise ValueError('Destination point must be not None and Unit on destination point must be subclass of ChessUnit')
+            else:
+                raise ValueError('Invalid move for a Pawn')
+        else:
+            if self.pos[0] + 1 == dest[0] and (self.pos[1] - 1 == dest[1] or self.pos[1] + 1 == dest[1]):
+                if not self.check_available(dest, map):
+                    map.set_unit(dest, None)
+                    last_pos = self.pos
+                    self.pos = dest
+                    map.set_unit(last_pos, None)
+                    map.set_unit(self.pos, self)
+                else:
+                    raise ValueError('Destination point must be not None and Unit on destination point must be subclass of ChessUnit')
+            else:
+                raise ValueError('Invalid move for a Pawn')

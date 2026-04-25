@@ -14,7 +14,7 @@ setup(
   description='This is ultimate library to create your Chess!',
   long_description=readme(),
   long_description_content_type='text/markdown',
-  url='https://github.com/Salmon-bit',
+  url='https://github.com/Salmon-bit/OOPChess',
   packages=find_packages(),
   install_requires=[],
   classifiers=[

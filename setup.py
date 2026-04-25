@@ -8,7 +8,7 @@ def readme():
 
 setup(
   name='ultimate-chesslib',
-  version='0.0.2',
+  version='0.0.3',
   author='IgorGrebenchikov',
   author_email='grebenchikov_igor@mail.ru',
   description='This is ultimate library to create your own chess simulator!',

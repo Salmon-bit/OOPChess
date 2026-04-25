@@ -1,0 +1,4 @@
+__pycache__
+.venv
+ChessLib/__pycache__
+main.py

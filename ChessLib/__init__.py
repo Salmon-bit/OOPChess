@@ -4,5 +4,5 @@ from .king import *
 from .knight import *
 from .pawn import *
 from .queen import *
-from .rock import *
+from .rook import *
 from .chess_table import *

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from .rock import Rock
+from .rook import Rook
 from .bishop import Bishop
 from .knight import Knight
 from .king import King
@@ -29,9 +29,9 @@ class ChessTable:
                 match col:
                     case 0 | 7:
                         if row == 0:
-                            self.map[row].append(Rock((row, col), 'black'))
+                            self.map[row].append(Rook((row, col), 'black'))
                         elif row == 7:
-                            self.map[row].append(Rock((row, col), 'white'))
+                            self.map[row].append(Rook((row, col), 'white'))
                         elif row == 1:
                             self.map[row].append(Pawn((row, col), 'black'))
                         elif row == 6:

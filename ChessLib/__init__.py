@@ -1,10 +1,9 @@
 """
-OOP Chess Library v0.0.1 (chesslib)
+OOP Chess Library v0.0.4 (ultimate-chesslib)
 
 The MIT License Copyright © 2026, Igor Grebenchikov
 
 """
-
 
 from .bishop import *
 from .chess_unit import *

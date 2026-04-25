@@ -6,7 +6,6 @@ A Python chess library built with object-oriented programming principles. Provid
 
 ```
 OOPChess/
-├── main.py              # Entry point / usage example
 ├── setup.py             # Package setup
 ├── setup.cfg
 └── ChessLib/

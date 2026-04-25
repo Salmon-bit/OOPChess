@@ -1,3 +1,11 @@
+"""
+OOP Chess Library v0.0.1 (chesslib)
+
+The MIT License Copyright © 2026, Igor Grebenchikov
+
+"""
+
+
 from .bishop import *
 from .chess_unit import *
 from .king import *

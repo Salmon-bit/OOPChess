@@ -2,3 +2,8 @@ __pycache__
 .venv
 ChessLib/__pycache__
 main.py
+.vscode
+build
+dist
+ultimate_chesslib.egg-info
+chesslib.egg-info

@@ -6,19 +6,18 @@ A Python chess library built with object-oriented programming principles. Provid
 
 ```
 OOPChess/
-├── main.py              # Entry point / usage example
-├── setup.py             # Package setup
-├── setup.cfg
-└── ChessLib/
-    ├── __init__.py      # Public package exports
-    ├── chess_unit.py    # Base class for all pieces
-    ├── chess_table.py   # Chess board logic
-    ├── rock.py          # Rook piece
-    ├── bishop.py        # Bishop piece
-    ├── knight.py        # Knight piece
-    ├── king.py          # King piece
-    ├── queen.py         # Queen piece
-    └── pawn.py          # Pawn piece
+ > setup.py             # Package setup
+ > setup.cfg
+ > ChessLib/
+    > __init__.py      # Public package exports
+    > chess_unit.py    # Base class for all pieces
+    > chess_table.py   # Chess board logic
+    > rook.py          # Rook piece
+    > bishop.py        # Bishop piece
+    > knight.py        # Knight piece
+    > king.py          # King piece
+    > queen.py         # Queen piece
+    > pawn.py          # Pawn piece
 ```
 
 ## Requirements
@@ -35,6 +34,12 @@ Clone the repository and install the package locally:
 git clone https://github.com/Salmon-bit/OOPChess
 cd OOPChess
 pip install -e .
+```
+
+Also you can install it with pip:
+
+```bash
+pip install ultimate-chesslib
 ```
 
 Or just use `ChessLib` directly by placing it next to your script.
@@ -63,10 +68,10 @@ print(board)
 +---+---+---+---+---+---+---+---+---+
 | 8 | R | K | B | Q | + | B | K | R |
 | 7 | P | P | P | P | P | P | P | P |
-| 6 | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ |
-| 5 | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ |
-| 4 | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ |
-| 3 | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ | ∙ |
+| 6 | . | . | . | . | . | . | . | . |
+| 5 | . | . | . | . | . | . | . | . |
+| 4 | . | . | . | . | . | . | . | . |
+| 3 | . | . | . | . | . | . | . | . |
 | 2 | P | P | P | P | P | P | P | P |
 | 1 | R | K | B | Q | + | B | K | R |
 +---+---+---+---+---+---+---+---+---+

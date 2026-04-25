@@ -7,11 +7,11 @@ def readme():
 
 
 setup(
-  name='chesslib',
-  version='0.0.1',
+  name='ultimate-chesslib',
+  version='0.0.2',
   author='IgorGrebenchikov',
   author_email='grebenchikov_igor@mail.ru',
-  description='This is ultimate library to create your Chess!',
+  description='This is ultimate library to create your own chess simulator!',
   long_description=readme(),
   long_description_content_type='text/markdown',
   url='https://github.com/Salmon-bit/OOPChess',

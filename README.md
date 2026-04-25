@@ -92,7 +92,7 @@ The main board class.
 
 ### `ChessUnit` (base class for all pieces)
 
-All piece classes (`Rock`, `Bishop`, `Knight`, `King`, `Queen`, `Pawn`) inherit from `ChessUnit`.
+All piece classes (`Rook`, `Bishop`, `Knight`, `King`, `Queen`, `Pawn`) inherit from `ChessUnit`.
 
 | Method                       | Description                                             |
 | ---------------------------- | ------------------------------------------------------- |

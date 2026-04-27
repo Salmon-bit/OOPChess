@@ -53,7 +53,7 @@ class Pawn(ChessUnit):
         self.moved = True
     
     def attack(self, dest: tuple[int, int], map: ChessTable):
-        if self.side == 'white':
+        if self.side == 'white' and map.get_unit(dest).side == 'black':
             if self.pos[0] - 1 == dest[0] and (self.pos[1] - 1 == dest[1] or self.pos[1] + 1 == dest[1]):
                 if not self.check_available(dest, map):
                     map.set_unit(dest, None)
@@ -65,7 +65,7 @@ class Pawn(ChessUnit):
                     raise ValueError('Destination point must be not None and Unit on destination point must be subclass of ChessUnit')
             else:
                 raise ValueError('Invalid move for a Pawn')
-        else:
+        elif self.side == 'black' and map.get_unit(dest).side == 'white':
             if self.pos[0] + 1 == dest[0] and (self.pos[1] - 1 == dest[1] or self.pos[1] + 1 == dest[1]):
                 if not self.check_available(dest, map):
                     map.set_unit(dest, None)
@@ -77,3 +77,5 @@ class Pawn(ChessUnit):
                     raise ValueError('Destination point must be not None and Unit on destination point must be subclass of ChessUnit')
             else:
                 raise ValueError('Invalid move for a Pawn')
+        else:
+            raise ValueError(f'Attacking unit must be other side, not {self.side}')

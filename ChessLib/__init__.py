@@ -1,5 +1,5 @@
 """
-OOP Chess Library v0.0.4 (ultimate-chesslib)
+OOP Chess Library v0.0.5 (ultimate-chesslib)
 
 The MIT License Copyright © 2026, Igor Grebenchikov
 

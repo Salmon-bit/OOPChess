@@ -29,7 +29,7 @@ class Knight(ChessUnit):
             else:
                 return False
 
-    def goto(self, dest: tuple[int, int], map, flag=False):
+    def goto(self, dest: tuple[int, int], map):
         if self.check_available(dest, map):
             self.pos = dest
         else:

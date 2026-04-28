@@ -82,6 +82,8 @@ class ChessTable:
                             self.map[row].append(Pawn((row, col), 'white'))
                         else:
                             self.map[row].append(None)
+        self.white_king_pos = (7, 4)
+        self.black_king_pos = (0, 4)
 
     def __str__(self):
         """Provides the visual representation of the board."""
@@ -132,6 +134,14 @@ class ChessTable:
     def attack_unit(self, position: tuple[int, int], destination: tuple[int, int]) -> None:
         """Unit at `position` attacks unit at `destination`."""
         self.get_unit(position).attack(destination, self)
+
+    def set_king_pos(self, pos, side):
+        if side == 'white':
+            self.white_king_pos = pos
+        elif side == 'black':
+            self.black_king_pos = pos
+        else:
+            raise ValueError(f'Unknown side {side}')
 
     def __repr__(self) -> str:
         return self.__str__()
